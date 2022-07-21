@@ -1,4 +1,5 @@
-#crea un asitente que te ayude a usar el smartphone
+# crea un asitente que te ayude a usar el smartphone
+
 
 def main():
     print("Hola, soy Jarvis, el bot de android")
@@ -35,8 +36,9 @@ def main():
     print("Tu color de piel es " + str(color_piel))
     print("Para comenzar, introduce tu color de pelo")
     color_pelo = input()
-    
-#define la clase android
+
+
+# define la clase android
 class Android:
     def __init__(self, nombre, edad, altura, peso, sexo, color_ojos, color_piel, color_pelo):
         self.nombre = nombre
@@ -47,6 +49,7 @@ class Android:
         self.color_ojos = color_ojos
         self.color_piel = color_piel
         self.color_pelo = color_pelo
+
     def saludar(self):
         print("Hola, soy " + self.nombre)
         print("Mi edad es " + str(self.edad))
@@ -56,15 +59,18 @@ class Android:
         print("Mi color de ojos es " + self.color_ojos)
         print("Mi color de piel es " + self.color_piel)
         print("Mi color de pelo es " + self.color_pelo)
-    def despedirse(self):   
+
+    def despedirse(self):
         print("Hasta luego, " + self.nombre)
 
-#crea un objeto de la clase android
+
+# crea un objeto de la clase android
 android = Android("Jarvis", 20, 1.70, 70, "masculino", "azul", "blanco", "rubio")
 android.saludar()
 android.despedirse()
 
-#crea un menu de opciones
+
+# crea un menu de opciones
 def menu():
     print("Hola, soy Jarvis, el bot de android")
     print("Para usarme, debes escribirme")
@@ -84,7 +90,7 @@ def menu():
     edad = int(input())
     print("Tu edad es " + str(edad))
     print("Para comenzar, introduce tu altura")
-    altura = float(input())
+    altura = float(input())  # float es para que sea decimal
     print("Tu altura es " + str(altura))
     print("Para comenzar, introduce tu peso")
     peso = float(input())
@@ -104,18 +110,20 @@ def menu():
     android.saludar()
     android.despedirse()
 
-#llama a la función menu
+
+# llama a la función menu
 menu()
 
-#ejecuta el programa
+# ejecuta el programa
 if __name__ == "__main__":
     main()
-    
-#cerramos el programa
+
+# cerramos el programa
 print("Gracias por usarme")
 print("Adios!")
+input()
+exit()
 
-    
-#fin de la clase android
-
-
+# fin de la clase android
+# fin de la función main
+# fin del programa

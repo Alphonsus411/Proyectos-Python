@@ -12,4 +12,3 @@ print(valor)
 valor = "Alejandro"
 
 print(valor)
-

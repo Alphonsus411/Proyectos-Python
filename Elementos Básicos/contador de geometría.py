@@ -1,4 +1,4 @@
-#crea un programa de contador de geometría
+# crea un programa de contador de geometría
 def contador():
     print("""
     1. Cuadrado
@@ -40,4 +40,3 @@ def contador():
     elif opcion == 6:
         print("Gracias por usar el programa")
         print("Erick Zanusemm")
-        

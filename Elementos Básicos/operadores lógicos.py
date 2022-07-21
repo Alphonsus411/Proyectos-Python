@@ -6,4 +6,4 @@ c = 20
 
 resultado = ((a > b) or (b < c))
 
-print (resultado)
+print(resultado)

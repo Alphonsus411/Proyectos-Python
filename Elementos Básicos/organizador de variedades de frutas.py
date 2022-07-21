@@ -1,60 +1,84 @@
-#crea una clase para organizar frutas
-class Solution: 
+# crea una clase para organizar frutas
+class Solution:
     def __init__(self):
         self.frutas = []
+
     def agregar(self, fruta):
         self.frutas.append(fruta)
+
     def eliminar(self, fruta):
         self.frutas.remove(fruta)
+
     def mostrar(self):
         print(self.frutas)
+
     def buscar(self, fruta):
         if fruta in self.frutas:
             print("Si existe")
         else:
             print("No existe")
+
     def ordenar(self):
         self.frutas.sort()
+
     def invertir(self):
         self.frutas.reverse()
+
     def contar(self):
         print(len(self.frutas))
+
     def limpiar(self):
         self.frutas = []
+
     def copiar(self):
         self.frutas = self.frutas[:]
+
     def copiar2(self):
         self.frutas = self.frutas.copy()
+
     def copiar3(self):
         self.frutas = self.frutas.deepcopy()
+
     def copiar4(self):
         self.frutas = self.frutas.copy()
+
     def copiar5(self):
         self.frutas = self.frutas.copy()
+
     def copiar6(self):
         self.frutas = self.frutas.copy()
+
     def copiar7(self):
         self.frutas = self.frutas.copy()
+
     def copiar8(self):
         self.frutas = self.frutas.copy()
+
     def copiar9(self):
         self.frutas = self.frutas.copy()
+
     def copiar10(self):
         self.frutas = self.frutas.copy()
+
     def copiar11(self):
         self.frutas = self.frutas.copy()
+
     def copiar12(self):
         self.frutas = self.frutas.copy()
+
     def copiar13(self):
         self.frutas = self.frutas.copy()
+
     def copiar14(self):
         self.frutas = self.frutas.copy()
+
     def copiar15(self):
         self.frutas = self.frutas.copy()
 
-#crea una instancia de la clase
+
+# crea una instancia de la clase
 frutas = Solution()
-#agrega frutas
+# agrega frutas
 frutas.agregar("manzana")
 frutas.agregar("pera")
 frutas.agregar("uva roja")
@@ -113,22 +137,22 @@ frutas.agregar("pimiento chinco")
 frutas.agregar("pimiento ancho")
 frutas.agregar("pimiento morado")
 
-#muestra las frutas
+# muestra las frutas
 frutas.mostrar()
-#busca una fruta
+# busca una fruta
 frutas.buscar("uva roja")
-#ordena las frutas
+# ordena las frutas
 frutas.ordenar()
-#invierte las frutas
+# invierte las frutas
 frutas.invertir()
-#cuenta las frutas
+# cuenta las frutas
 frutas.contar()
-#limpia las frutas
+# limpia las frutas
 frutas.limpiar()
-#copia las frutas
+# copia las frutas
 frutas.copiar()
 
-#crea una variante dentro de cada una de las funciones
+# crea una variante dentro de cada una de las funciones
 frutas.copiar2()
 frutas.copiar3()
 frutas.copiar4()

@@ -9,5 +9,4 @@ a /= 3  # division en asignacion
 a **= 2  # potencia en asignacion
 a %= 2  # modulo en asignacion 
 
-
 print(a)
