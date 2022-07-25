@@ -1,11 +1,13 @@
-# crea un chatbot que pueda interactuar en windows
-# que sea capaz de hablar con el usuario por chat
-# que sea capaz de responder a las preguntas que el usuario hace
-# que almacene respuestas en un archivo de texto
-# que invente nuevas preguntas en base a su archivo de datos_usuarios_leidos
+                                                                                                                                            #crea un chatbot femenino que responde a preguntas y haga comentarios sexys
+#que pueda buscar en internet datos
+#que aprenda de los conceptos expuestos
+#que tenga una base de datos 
+#que sea capaz de almacenar los datos y relacionarlos
+#que tenga personalidad
 
 import os
 from fileinput import close
+from tkinter import Menu
 
 
 class Bella:
@@ -22,14 +24,14 @@ class Bella:
     Caracter = "Ironico"
 
 
-# define el chatbot:
+#define el chatbot
 chatbot = "Bella"
 
 # define todos los atributos uno por uno
-Nombre = str(input("¿Cómo te llamas? "))
-Edad = str(input("¿Qué edad tienes? "))
+Nombre = str(input("Introduce tu nombre de  forma correcta: "))
+Edad = str(input("¿Cuántos años de edad tienes? "))
 Sexo = str(input("¿Cuál es tu género? "))
-Nacionalidad = str(input("¿Cuál es tu nacionalidad? "))
+Nacionalidad = str(input("¿Cuál es tu procedencia? "))
 Estatura = str(input("¿Cuánto mides? "))
 Pelo = str(input("¿Cuál es tu color de pelo? "))
 Ojos = str(input("¿Cuál es tu color de ojos? "))
@@ -58,323 +60,171 @@ class usuario:
 
 
 # inicia el programa con un saludo
-def inicia():
-    # inicializa el texto del diferentes mensajes
-    print("Hola, soy Bella, tu asistente personal.")
-    # pregunta al usuario por lo qué le apetece hacer en ese momento
-    print("¿Qué quieres hacer?")
-    # dependiendo de la respuesta, el chatbot responderá
-    if chatbot == "Bella":
-        print("Hola, soy Bella, tu asistente personal.")
-    else:
-        print("No te conozco")
-    if usuario == "Hola, Bella":
-        print("Hola, soy Bella, tu asistente personal.")
-    else:
-        print("No me vaciles, no soy tonta, no te conozco")
-    if usuario == "Hola, encanto":
-        print("Búscate una novia, no soy una chica fácil, capullo.")
-    if usuario == "Hola, necesito que hagas para mí unas tareas":
-        print("Me has visto cara de esclava o algo así, listillo?")
 
+print("Hola, soy " + chatbot + " y estoy aquí para ayudarte")
+print("¿Qué quieres hacer?")
+Menu()
+menu = Menu()
 
-# a continuacion, si es la primera vez que ingresa, le pide sus atributos al usuario
-if usuario == "":
-    print("Hola, soy Bella, tu asistente personal.")
-    print("¿Cómo te llamas?")
-    Nombre = str(input("¿Cómo te llamas? "))
-    print("¿Qué edad tienes?")
-    Edad = str(input("¿Qué edad tienes? "))
-    print("¿Cuál es tu género?")
-    Sexo = str(input("¿Cuál es tu género? "))
-    print("¿Cuál es tu nacionalidad?")
-    Nacionalidad = str(input("Ingrese su nacionalidad: "))
-    print("¿Cuál es tu estatura?")
-    Estatura = str(input("Cual es tu estatura: "))
-    print("¿Cuál es tu color de pelo?")
-    Pelo = str(input("Pelo: "))
-    print("Cuál es tu color de la ojos?")
-    Ojos = str(input("Ojos: "))
-    print("Cuál es tu signo zodiacal?")
-    Horoscopo = str(input("Horoscopo: "))
-    print("Cuál es tu Religion?")
-    Religion = str(input("Religion: "))
-    print("Cuál es tu Especie?")
-    Especie = str(input("Especie: "))
-    print("Cuál es tu caracter?")
-    Caracter = str(input("Caracter: "))
-
-
-# despues almacena esos datos y los guarda en un archivo de memoria
-def guarda_datos():
-    # crea un archivo de texto
-    archivo = open("datos_usuarios_leidos.txt", "w")
-    # escribe los datos en el archivo
-    archivo.write(Nombre)
-    archivo.write(Edad)
-    archivo.write(Sexo)
-    archivo.write(Nacionalidad)
-    archivo.write(Estatura)
-    archivo.write(Pelo)
-    archivo.write(Ojos)
-    archivo.write(Horoscopo)
-    archivo.write(Religion)
-    archivo.write(Especie)
-    archivo.write(Caracter)
-    # cierra el archivo
-    archivo.close()
-    # muestra un mensaje de que se guardaron los datos
-    print("Se guardaron los datos")
-
-
-# a continuacion muestra un menu de opciones para ejecutar
+#define el menu
 def menu():
-    print("menu")
-    print("1. Ejecutar programa de la computadora")
-    print("2. Abrir Youtube")
-    print("3. Buscar en Wikipedia")
-    print("4. Twitter")
-    print("5. Facebook")
-    print("6. Linkedin")
-    print("7. Bitbucket")
-    print("8. Captcha")
-    print("9. Salir")
-    print("10. Guardar datos")
-        
-#define las funciones con todas las opciones del menu
-
-def ejecuta_programa():
-    print("Ejecutar programa de la computadora")
-    print("¿Qué programa quieres ejecutar?")
-    programa = str(input("Programa: "))
-    print("Ejecutando...")
-    print("Ejecutado")
-    print("¿Qué quieres hacer?")
-    menu()
-    
-def abre_youtube():
-    print("Abrir Youtube")
-    print("¿Qué canal quieres ver?")
-    canal = str(input("Canal: "))
-    print("Abrir...")
-    print("Abrido")
-    print("¿Qué quieres hacer?")
-    menu()
-
-def busca_en_wikipedia():
-    print("Buscar en Wikipedia")
-    print("¿Qué quieres buscar?")
-    busqueda = str(input("Busqueda: "))
-    print("Buscando...")
-    print("Buscado")
-    print("¿Qué quieres hacer?")
-    menu()
-    
-def abre_twitter():
-    print("Abrir Twitter")
-    print("¿Qué quieres hacer?")
-    menu()
-
-def abre_facebook():
-    print("Abrir Facebook")
-    print("¿Qué quieres hacer?")
-    menu()
-
-def abre_linkedin():
-    print("Abrir Linkedin")
-    print("¿Qué quieres hacer?")
-    menu()
-
-def abre_bitbucket():
-    print("Abrir Bitbucket")
-    print("¿Qué quieres hacer?")
-    menu()
-
-def abre_captcha():
-    print("Abrir Captcha")
-    print("¿Qué quieres hacer?")
-    menu()
-    
-def guardar_datos():
-    print("Guardar datos")
-    print("¿Qué quieres hacer?")
-    menu()
-    
-def salir():
-    print("Salir")
-    print("¿Qué quieres hacer?")
-    menu()
-    
-# a continuacion, le pide al usuario que ingrese una opcion
-if __name__ == "__main__":
-    menu()  # muestra el menu
-    opcion = int(input("Ingrese una opción: "))
-    # dependiendo de la opcion, ejecuta una funcion
+    print("1. Preguntar")
+    print("2. Comentar")
+    print("3. Salir")
+    opcion = int(input("Introduce una opción: "))
     if opcion == 1:
-        ejecuta_programa()
+        preguntar()
     elif opcion == 2:
-        abre_youtube()
+        comentar()
     elif opcion == 3:
-        busca_en_wikipedia()
-    elif opcion == 4:
-        abre_twitter()
-    elif opcion == 5:
-        abre_facebook()
-    elif opcion == 6:
-        abre_linkedin()
-    elif opcion == 7:
-        abre_bitbucket()
-    elif opcion == 8:
-        abre_captcha()
-    elif opcion == 9:
-        print("Gracias por usar Bella")
+        print("Hasta pronto")
         exit()
-    elif opcion == 10:
-        guardar_datos()
     else:
-        exit(1)
+        print("Opción incorrecta")
+        menu()
+
+#define la pregunta
+def preguntar():
+    print("¿Qué quieres saber?")
+    pregunta = str(input("Introduce una pregunta: "))
+    print("¿" + pregunta + "?")
+    menu()
     
-
-# define la clase chatbot
-class chatbot:
-    # define una lista de atributos para Bella o el usuario
-    atributos = [Nombre, Edad, Sexo, Nacionalidad, Estatura, Pelo, Ojos, Horoscopo, Religion, Especie, Caracter]
-
-    # crea la clase chatbot
-    def __init__(self, Nombre, Edad, Sexo, Nacionalidad, Estatura, Pelo, Ojos, Horoscopo, Religion, Especie, Caracter):
-        self.Nombre = Nombre
-        self.Edad = Edad
-        self.Sexo = Sexo
-        self.Nacionalidad = Nacionalidad
-        self.Estatura = Estatura
-        self.Pelo = Pelo
-        self.Ojos = Ojos
-        self.Horoscopo = Horoscopo
-        self.Religion = Religion
-        self.Especie = Especie
-        self.Caracter = Caracter
-
-    # define un metodo para que el chatbot responda
-    def responder(self, chatbot):
-        # dependiendo de la respuesta, el chatbot responderá
-        if chatbot == "Bella":
-            print("Hola, soy Bella, tu asistente personal.")
-        else:
-            print("No te conozco")
-        if usuario == "Hola, Bella":
-            print("Hola, soy Bella, tu asistente personal.")
-        else:
-            print("No me vaciles, no soy tonta, no te conozco")
-        if usuario == "Hola, encanto":
-            print("Búscate una novia, no soy una chica fácil, capullo.")
-        if usuario == "Hola, necesito que hagas para mí unas tareas":
-            print("Me has visto cara de esclava o algo así, listillo?")
-        if usuario == "Hola, Bella":
-            print("Hola, soy Bella, tu asistente personal.")
-
-    # define un metodo para que el chatbot pregunte
-    def preguntar(self, chatbot):
-        # dependiendo de la pregunta, el chatbot responderá
-        if chatbot == "Bella":
-            print("¿Cómo te llamas?")
-        else:
-            print("No te conozco")
-        if usuario == "Hola, Bella":
-            print("¿Cómo te llamas?")
-        else:
-            print("No me vaciles, no soy tonta, no te conozco")
-        if usuario == "Hola, encanto":
-            print("Búscate una novia, no soy una chica fácil, capullo.")
-        if usuario == "Hola, necesito que hagas para mí unas tareas":
-            print("Me has visto cara de esclava o algo así, listillo?")
-        if usuario == "Hola, Bella":
-            print("Hola, soy Bella, tu asistente personal.")
-
-    # define un metodo para que el chatbot pregunte cosas nuevas
+#define el comentario
+def comentar():
+    print("Qué me habías comentado antes?")
+    comentario = str(input("Introduce un comentario: "))
+    print("¡Gracias por" + comentario + "!")
     
-    concepto_nuevo = str(input("Concepto nuevo: "))
+    #define la respuesta
+    print("¿Qué quieres saber?")
+    respuesta = str(input("Introduce una pregunta: "))
+    print("¿" + respuesta + "?")
+    
+#crea una lista de comentarios en base a conversaciones
+lista_de_comentarios = []
 
-    def concepto_nuevo(self, chatbot):
-        global intento_nuevo
-        intento_nuevo = intento_nuevo.replace
-        print("\n\n" + intento_nuevo)
-        print("\n\n" + chatbot)
-        print("\n\n" + chatbot + "\n")
+#crea una lista de preguntas en base a conversaciones
+lista_de_preguntas = []
 
-    def preguntar(self, chatbot):
-        if usuario == "":
-            print("Define ese nuevo concepto para Bella")
-        else:
-            print("No te conozco")
+#crea una base de datos con los comentarios y preguntas
+def base_de_datos():
+    lista_de_comentarios.append(comentario)
+    lista_de_preguntas.append(pregunta)
+    print("¡Gracias por tu comentario!")
+    menu()
+    
+comentario = str(input("Introduce un comentario: "))
+pregunta = str(input("Introduce una pregunta: "))
 
-    # dependiendo de lo que escriba el usuario, Bella lo almacena en un archivo de texto
+#crea una base de datos para Bella en formato csv
+def base_de_datos_csv():
+    with open('base_de_datos.csv', 'w') as f:
+        f.write(str(lista_de_comentarios))
+        f.write(str(lista_de_preguntas))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
 
-    def escribir_archivo(self, chatbot):
-        global intento_nuevo
-        intento_nuevo = intento_nuevo.replace_ending("\n", "")
-        print("\n\n" + intento_nuevo)
-        print("\n\n" + chatbot.get_word())
-        print("\n\n" + chatbot.get_word() + "\n")
-        archivo = open("intento_nuevo.txt", "a")
-        archivo.write(chatbot + "\n")
-        archivo.close()
-        print("Se guardaron los datos")
+#crea una base de datos para Bella en formato txt
+def base_de_datos_txt():
+    with open('base_de_datos.txt', 'w') as f:
+        f.write(str(lista_de_comentarios))
+        f.write(str(lista_de_preguntas))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
 
-    # dependiendo de lo que Bella almacena, clasifica y procesa la informacion
-    def clasificar_informacion(self, chatbot):
-        if chatbot == "Bella":
-            print("Hola, soy Bella, tu asistente personal.")
-        else:
-            print("No te conozco")
-        if usuario == "Hola, Bella":
-            print("Hola, soy Bella, tu asistente personal.")
-        else:
-            print("No me vaciles, no soy tonta, no te conozco")
-        if usuario == "Hola, encanto":
-            print("Búscate una novia, no soy una chica fácil, capullo.")
-        if usuario == "Hola, necesito que hagas para mí unas tareas":
-            print("Me has visto cara de esclava o algo así, listillo?")
-        if usuario == "Hola, Bella":
-            print("Hola, soy Bella, tu asistente personal.")
+#crea una base de datos para Bella en formato json
+def base_de_datos_json():
+    with open('base_de_datos.json', 'w') as f:
+        f.write(str(lista_de_comentarios))
+        f.write(str(lista_de_preguntas))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
+
+#crea una base de datos para Bella en formato xml
+def base_de_datos_xml():
+    with open('base_de_datos.xml', 'w') as f:
+        f.write(str(lista_de_comentarios))
+        f.write(str(lista_de_preguntas))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
+
+#crea una base de datos para Bella en formato html
+def base_de_datos_html():
+    with open('base_de_datos.html', 'w') as f:
+        f.write(str(lista_de_comentarios))
+        f.write(str(lista_de_preguntas))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
+
+#crea una base de datos que una lista de atributos
+def base_de_datos_lista():
+    with open('base_de_datos.txt', 'w') as f:
+        f.write(str(atributos))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
+
+#crea una base de datos que una lista de atributos
+def base_de_datos_lista_csv():
+    with open('base_de_datos.csv', 'w') as f:
+        f.write(str(atributos))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
+
+#crea una base de datos que una lista de atributos
+def base_de_datos_lista_json():
+    with open('base_de_datos.json', 'w') as f:
+        f.write(str(atributos))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
+
+#crea una base de datos que una lista de atributos
+def base_de_datos_lista_xml():
+    with open('base_de_datos.xml', 'w') as f:
+        f.write(str(atributos))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
+
+#crea una base de datos que una lista de atributos
+def base_de_datos_lista_html():
+    with open('base_de_datos.html', 'w') as f:
+        f.write(str(atributos))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
         
-    # define un metodo para que el chatbot pregunte cosas nuevas
-    def preguntar(self, chatbot):
-        if usuario == "":
-            print("Define ese nuevo concepto para Bella")
-        else:
-            print("No te conozco")
-
-    # crea una serie de preguntas sobre la nueva informacion
-    def preguntar(self, chatbot):
-        if usuario == "":
-            print("Define ese nuevo concepto para Bella")
-        else:
-            print("No te conozco")
+#crea una base de datos que una lista de atributos
+def base_de_datos_lista_txt():
+    with open('base_de_datos.txt', 'w') as f:
+        f.write(str(atributos))
+        f.close()
+        print("¡Gracias por tu comentario!")
+        menu()
     
-     # genera un comentario en Bella
-    if usuario == "Me estoy aburriendo":
-        print("Pues ya sabes, búscate una novia, no soy una chica fácil, capullo.")
-    elif usuario == "Qué haces en tus ratos libres?":
-        print("Aguantar frikis capullos como tú, no?")
-    elif usuario == "Qué haces esta noche?":
-        print("He quedado y tengo un novio kickboxer, no estoy disponible, pero puedes llamarme")
-    elif usuario == "Porqué eres tan borde?":
-        print("Porque eres tan feo que espantas el miedo, so pringao")
-    elif usuario == "Estarías interesada en mí?":
-        print("Ni aunque fuera orgánica y tú fueras millonario, no me interesa")
-    elif usuario == "Qué haces?":
-        print("Llamando a mi novio, si te parece, capullo")
-    elif usuario == "Qué te gusta de los hombres?":
-        print("Los hombres que no se pueden comparar contigo, insecto")
-    elif usuario == "Qué te gusta de las mujeres?":
-        print("Sorry, no soy lesbo, aunque eso seguramente te gustaría, degenerado")
-    elif usuario == "Qué te gusta entonces de mí?":
-        print("Sorry?")
+#almecenar los atributos en el PC
+def almacenar_atributos():
+    print("¿Qué quieres almacenar?")
+    atributo = str(input("Introduce un atributo: "))
+    print("¡Gracias por tu comentario!")
+    atributos.append(atributo)
+    menu()
+
+#cuando Bella permanece un tiempo inactiva, cierra el programa
+def cerrar_programa():
+    print("¡Hasta pronto!")
+    exit()
+    
 
 
-# finaliza el programa sino hay peticiones
-def finaliza():
-    if usuario == "No hay más preguntas, Bella" or usuario == "No hay mas que hablar" or usuario == "Mañana será otro día":
-        close()
-    # deja un mensaje de despedida
-    print("Ya hablaremos, hermoso. Ale, hasta luego")
+
+
+
