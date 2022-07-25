@@ -5,6 +5,7 @@ def initials(phrase):
         result += word[0]
         return result.upper()
 
-print(initials("Universal Serial Bus")) # Should be: USB
-print(initials("local area network")) # Should be: LAN
-print(initials("Operating system")) # Should be: OS
+
+print(initials("Universal Serial Bus"))  # Should be: USB
+print(initials("local area network"))  # Should be: LAN
+print(initials("Operating system"))  # Should be: OS

@@ -1,14 +1,13 @@
-#inicia programa
-from ctypes import py_object
+# inicia programa
 
 
 def main():
-    print ("Bienvenido a la temperatura")
-    print ("")
-    print ("1. Mostrar temperatura")
-    print ("2. Mostrar mapa")
-    print ("3. Salir")
-    print ("")
+    print("Bienvenido a la temperatura")
+    print("")
+    print("1. Mostrar temperatura")
+    print("2. Mostrar mapa")
+    print("3. Salir")
+    print("")
     opcion = int(input("Ingrese una opcion: "))
     if opcion == 1:
         medicion_temperatura()
@@ -16,50 +15,59 @@ def main():
         datos = tomar_datos()
         mostrar_mapa(datos)
     elif opcion == 3:
-        print ("Gracias por usar el programa")
-#conecta a google
+        print("Gracias por usar el programa")
+
+
+# conecta a google
 def conectar_google():
     import webbrowser
     import time
     webbrowser.open("https://www.google.com")
-    time.sleep(5) 
-    webbrowser.open("https://www.google.com/maps/@-34.603722,-58.381592,12z")    
-#crea una clave de acceso
+    time.sleep(5)
+    webbrowser.open("https://www.google.com/maps/@-34.603722,-58.381592,12z")
+
+
+# crea una clave de acceso
 pyowm.OWM('API_KEY')
 pyowm = pyowm.OWM('API_KEY')
 owm = pyowm.OWM('c9f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8')
-#crea una variable para la ciudad
+# crea una variable para la ciudad
 ciudad = input("Ingrese la ciudad: ")
-#crea una variable para la temperatura
+# crea una variable para la temperatura
 temperatura = owm.weather_at_place(ciudad)
-#crea una variable para la temperatura
+# crea una variable para la temperatura
 temperatura = temperatura.get_weather()
-#crea una variable para la temperatura
+# crea una variable para la temperatura
 temperatura = temperatura.get_temperature('celsius')
-#crea una variable para la temperatura
+# crea una variable para la temperatura
 temperatura = temperatura['temp']
-#crea una variable para la temperatura
+# crea una variable para la temperatura
 print("La temperatura es: ", temperatura)
-#crea una variable para la temperatura
-def medicion_temperatura() :
+
+
+# crea una variable para la temperatura
+def medicion_temperatura():
     temperatura = temperatura
-    if temperatura < 18 :
+    if temperatura < 18:
         print("Es muy frio")
-    elif temperatura < 25 :
+    elif temperatura < 25:
         print("Es frio")
-    elif temperatura < 30 :
+    elif temperatura < 30:
         print("Es normal")
-    elif temperatura < 35 :
+    elif temperatura < 35:
         print("Es caluroso")
-    elif temperatura < 40 :
+    elif temperatura < 40:
         print("Es muy caluroso")
-    else :
+    else:
         print("Es muy caluroso")
+
+
 medicion_temperatura()
 
-#toma datos de la temperatura
+
+# toma datos de la temperatura
 def tomar_datos():
-    datos = [] #obtiene los datos
+    datos = []  # obtiene los datos
     for i in range(5):
         temperatura = owm.weather_at_place(ciudad)
         temperatura = temperatura.get_weather()
@@ -67,98 +75,105 @@ def tomar_datos():
         temperatura = temperatura['temp']
         datos.append(temperatura)
     return datos
-#muestra los datos 
+
+
+# muestra los datos
 def mostrar_datos(datos):
     for i in range(5):
         print("Temperatura: ", datos[i])
+
+
 datos = tomar_datos()
 mostrar_datos(datos)
 
-#muestra un mapa geografico con los datos del tiempo
+
+# muestra un mapa geografico con los datos del tiempo
 def mostrar_mapa(datos):
     import folium
     import webbrowser
-    #crea un mapa
+    # crea un mapa
     mapa = folium.Map(location=[-34.603722, -58.381592], zoom_start=12)
-    #crea una capa
+    # crea una capa
     capa = folium.FeatureGroup(name="Temperatura")
-    #crea un punto
+    # crea un punto
     for i in range(5):
         folium.Marker([-34.603722, -58.381592], popup=datos[i]).add_to(capa)
-    #agrega la capa al mapa
+    # agrega la capa al mapa
     capa.add_to(mapa)
-    #muestra el mapa
+    # muestra el mapa
     mapa.save("temperatura.html")
-    #abre el mapa
+    # abre el mapa
     webbrowser.open("temperatura.html")
+
+
 mostrar_mapa(datos)
 
-#muestra un grafico de barras con los datos del tiempo
+
+# muestra un grafico de barras con los datos del tiempo
 def mostrar_grafico(datos):
     import matplotlib.pyplot as plt
-    import numpy as np
-    #crea una lista
+    # crea una lista
     lista = []
-    #crea una lista
+    # crea una lista
     lista2 = []
-    #crea una lista
+    # crea una lista
     lista3 = []
-    #crea una lista
+    # crea una lista
     lista4 = []
-    #crea una lista
+    # crea una lista
     lista5 = []
-    #crea una lista
+    # crea una lista
     lista6 = []
-    #crea una lista
+    # crea una lista
     lista7 = []
-    #crea una lista
+    # crea una lista
     lista8 = []
-    #crea una lista
+    # crea una lista
     lista9 = []
-    #crea una lista
+    # crea una lista
     lista10 = []
-    #crea una lista
+    # crea una lista
     lista11 = []
-    #crea una lista
+    # crea una lista
     lista12 = []
-    #crea una lista
+    # crea una lista
     lista13 = []
-    #crea una lista
+    # crea una lista
     lista14 = []
-    #crea una lista
+    # crea una lista
     lista15 = []
-    #crea una lista
+    # crea una lista
     lista16 = []
-    #crea una lista
+    # crea una lista
     lista17 = []
-    #crea una lista
+    # crea una lista
     lista18 = []
-    #crea una lista
+    # crea una lista
     lista19 = []
-    #crea una lista
+    # crea una lista
     lista20 = []
-    #crea una lista
+    # crea una lista
     lista21 = []
-    #crea una lista
+    # crea una lista
     lista22 = []
-    #crea una lista
+    # crea una lista
     lista23 = []
-    #crea una lista
+    # crea una lista
     lista24 = []
-    #crea una lista
+    # crea una lista
     lista25 = []
-    #crea una lista
+    # crea una lista
     lista26 = []
-    #crea una lista
+    # crea una lista
     lista27 = []
-    #crea una lista
+    # crea una lista
     lista28 = []
-    #crea una lista
+    # crea una lista
     lista29 = []
-    #crea una lista
+    # crea una lista
     lista30 = []
 
-#resume las listas y las muestra todas juntas
+    # resume las listas y las muestra todas juntas
     for i in range(5):
         lista.append(datos[i])
     for i in range(5):
@@ -220,9 +235,9 @@ def mostrar_grafico(datos):
     for i in range(5):
         lista30.append(datos[i])
 
-#cierra el programa
+    # cierra el programa
     plt.close()
-    #crea un grafico
+    # crea un grafico
     plt.plot(lista, label="1")
     plt.plot(lista2, label="2")
     plt.plot(lista3, label="3")
@@ -255,10 +270,9 @@ def mostrar_grafico(datos):
     plt.plot(lista30, label="30")
     plt.legend()
     plt.show()
-    #muestra el grafico
+    # muestra el grafico
     plt.show()
-    #se despide del programa
+    # se despide del programa
     print("Gracias por usar el programa. Creado por Erick Zanussem")
-    #cierra el programa
+    # cierra el programa
     plt.close()
-    

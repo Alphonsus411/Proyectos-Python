@@ -4,6 +4,7 @@ def first_and_last(message):
     else:
         return True
 
+
 print(first_and_last("else"))
 print(first_and_last("tree"))
 print(first_and_last(" "))

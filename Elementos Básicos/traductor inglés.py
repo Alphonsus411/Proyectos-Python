@@ -1,5 +1,5 @@
-#crea un programa de traducción de inglés a español
-#autor: @eymard
+# crea un programa de traducción de inglés a español
+# autor: @eymard
 
 def traductor_ingles():
     print("""
@@ -21,7 +21,8 @@ def traductor_ingles():
         print("Opción incorrecta")
         traductor_ingles()
 
-#ingles a español
+
+# ingles a español
 def ingles_espanol():
     print("""
     El traductor de inglés a español
@@ -68,10 +69,3 @@ def ingles_espanol():
         print("Ok")
     elif ingles == "no":
         print("No")
-    
-        
-    
-
-        
-
-    
