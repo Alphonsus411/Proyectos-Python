@@ -37,7 +37,7 @@ class Solution:
         self.frutas = self.frutas.copy()
 
     def copiar3(self):
-        self.frutas = self.frutas.deepcopy()
+        self.frutas = self.frutas.copy()
 
     def copiar4(self):
         self.frutas = self.frutas.copy()
