@@ -227,7 +227,7 @@ class Mesa:
     def jugar(self):
         for jugador in self.jugadores:
             carta_
-            print(jugador.nombre + "
+            print(jugador.nombre    
             ha
             jugado
             " + str(carta_jugada))

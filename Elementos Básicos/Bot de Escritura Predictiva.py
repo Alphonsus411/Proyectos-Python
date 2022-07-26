@@ -45,7 +45,7 @@ if opcion == 1:
     escritura = escritura.read()
     escritura = escritura.replace(palabra, reemplazo)
     escritura = open("escritura.txt", "w")
-    escritura.write(escritura)  # escribe el texto en el archivo
+    escritura.write(escritura)
     escritura.close()
     escritura = open("escritura.txt", "r")
     escritura = escritura.read()

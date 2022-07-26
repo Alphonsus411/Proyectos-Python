@@ -8,7 +8,13 @@ class Person:
 
     def greeting(self):
         return f"Hi, my name is {self.name}"
-        print("Hello! My name is {name}.format (name = self.name)")
+
+            
+            
+Otello = Person("Otello")
+print(Otello.greeting())
 
 
-help(Person)
+
+
+
