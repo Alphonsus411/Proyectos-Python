@@ -215,7 +215,7 @@ class Mesa:
         self.jugadores = []
 
     def repartir_cartas(self):
-        self.baraja.barajar()
+        self.baraja.repartir_cartas(self.jugadores)
         for jugador in self.jugadores:
             jugador.mano.cartas = self.baraja.cartas[:5]
             self.baraja.cartas = self.baraja.cartas[5:]
@@ -226,12 +226,9 @@ class Mesa:
 
     def jugar(self):
         for jugador in self.jugadores:
-            carta_
-            print(jugador.nombre    
-            ha
-            jugado
-            " + str(carta_jugada))
-            self.baraja.cartas.append(carta_jugada)
+            cart = jugador.mano.cartas.pop(0)
+            print(jugador.nombre + " ha jugado " + str(cart))
+            self.baraja.cartas.append(cart)
             self.baraja.barajar()
             self.baraja.repartir_cartas(self.jugadores)
             self.mostrar_manos()
