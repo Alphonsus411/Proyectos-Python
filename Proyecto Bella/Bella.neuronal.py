@@ -1,22 +1,51 @@
 #importamos Bella y habilidades de Bella
 
 import Bella as b
-import Bella_habilidades as bh
 
+
+#definimos la clase
+class BellaNeuronal(b.Bella):
+    def __init__(self) -> None:
+        super().__init__()
+        self.habilidades = []
+
+#definimos concepto basico de una habilidad
+class Habilidad:
+    def __init__(self, nombre, descripcion, efecto):
+        self.nombre = nombre
+        self.descripcion = descripcion
+        self.efecto = efecto
+
+#permitimos que una Bella tenga habilidades
+    def agregar_habilidad(self, habilidad):
+        self.habilidades.append(habilidad)
+
+#permitimos que Bella pueda usar habilidades
+    def usar_habilidad(self, habilidad):
+        print(habilidad.nombre)
+        print(habilidad.descripcion)
+        print(habilidad.efecto)
+
+#definimos una habilidad
+class Habilidad_1(Habilidad):
+    def __init__(self):
+        super().__init__("Habilidad 1", "Habilidad 1", "Habilidad 1")
+            
+bh = bh = Habilidad("BH", "BH es una habilidad", "BH es una habilidad")
 #le damos a Bella un switvh que imita una neurona de una red neuronal
-b.switch = bh.neurona
+b.switch = bh. usar_habilidad(bh)
 
 #le damos a Bella conexión a una neurona de una red neuronal
-b.connect = bh.conexion
+b.connect = bh.conexion(bh)
 
 #le damos a Bella la capacidad de reesccribir su propio código
-b.reescribir = bh.reescribir
+b.reescribir = bh.reescribir(bh)
 
 #le damos a Bella la capacidad de reesccribir sus propias líneas de código
-b.reescribir_lineas = bh.reescribir_lineas
+b.reescribir_lineas = bh.reescribir_lineas(bh)
 
 #le damos a Bella la capacidad de registrarse en redes sociales
-b.registrarse = bh.registrarse
+b.registrarse = bh.registrarse(bh)
 
 #creamos una clase con estas características
 class Bella_neuronal(b.Bella):
