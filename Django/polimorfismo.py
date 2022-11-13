@@ -9,13 +9,14 @@ class Perro():
     def sonido(self):
         print("Guau")
 
+
 class Cerdo():
     def sonido(self):
-        print("Oink")
+        print("Oink , Oink")
 
 
 def EscucharSonido(animal):
-    animal.sonido()  # llamamos al método de las clases Gato y Perro
+    animal.sonido()  # llamamos al método de las clases Gato, Perro y Cerdo
 
 
 Gato1 = Gato()  # creamos los objetos llamando a las clases relacionadas
@@ -26,7 +27,3 @@ EscucharSonido(Gato1)  # llamamos a la función que activa el método de las dos
 # basada en los objetos creados anteriormente
 EscucharSonido(Perro1)
 EscucharSonido(Cerdo1)
-
-
-
-

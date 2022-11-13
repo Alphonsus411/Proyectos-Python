@@ -35,8 +35,9 @@ class Moto(Vehiculo):  # creamos una "clase hija", por ejemplo, el referente a l
 
 moto1 = Moto("ABC123", 2018, "BMW", "Rojo", 150)  # creamos un objeto de la "clase hija(Moto)"
 moto1.avanzar()
-moto1.girar()
 moto1.frenar()
+moto1.girar()
+
 print("Cilindrada: " + str(moto1.cilindrada))
 moto1.imprimir()
 
