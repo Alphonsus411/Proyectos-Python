@@ -3,4 +3,5 @@ index = log.index("[")
 print(log[index+1:index+6])
 
 
-
+def search(pattern, line):
+    return None
